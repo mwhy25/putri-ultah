@@ -246,6 +246,9 @@
     </script>
      <script>
         document.getElementById("audioBut").addEventListener("click", function() {
+            let button = document.getElementById("audioBut");
+            button.style.animation = "fadeOut 1s forwards";
+            
             for (let i = 0; i < 30; i++) {
                 let confetti = document.createElement("div");
                 confetti.classList.add("confetti");
