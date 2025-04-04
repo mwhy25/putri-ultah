@@ -244,6 +244,24 @@
             audio.play();
         });
     </script>
+     <script>
+        document.getElementById("audioBut").addEventListener("click", function() {
+            for (let i = 0; i < 30; i++) {
+                let confetti = document.createElement("div");
+                confetti.classList.add("confetti");
+                document.body.appendChild(confetti);
+                
+                confetti.style.left = Math.random() * window.innerWidth + "px";
+                confetti.style.top = "0px";
+                confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                confetti.style.animationDuration = (Math.random() * 1 + 1) + "s";
+                
+                setTimeout(() => {
+                    confetti.remove();
+                }, 2000);
+            }
+        });
+    </script>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
